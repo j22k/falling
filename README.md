@@ -54,14 +54,11 @@ python final.py
 
 ## Demo
 
-https://github.com/j22k/falling/tree/main/assets/demo.mp4
+[View Demo Video](fall_detection_output.mp4)
 
-<video width="100%" controls>
-  <source src="https://github.com/j22k/falling/tree/main/assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/j22k/falldetection/assets/fall_detection_output.mp4
 
-Watch the demo video above to see the fall detection system in action. The video demonstrates:
+Watch the demo video above to see the fall detection system in action. You can find the demo video in the root directory (`fall_detection_output.mp4`). The video demonstrates:
 - Real-time pose detection and tracking
 - Visual indicators for different states (Normal, Potential Fall, Fall Detected)
 - Multiple fall detection scenarios

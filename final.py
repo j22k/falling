@@ -38,14 +38,14 @@ HISTORY_CLEANUP_INTERVAL = 5      # Seconds to keep track of a person after they
 # cap = cv2.VideoCapture("gettyimages-486787358-640_adpp.mp4")
 # cap = cv2.VideoCapture("gettyimages-1325099666-640_adpp.mp4")
 # cap = cv2.VideoCapture("gettyimages-1732145742-640_adpp.mp4")
-cap = cv2.VideoCapture("videoplayback.mp4")
+# cap = cv2.VideoCapture("videoplayback.mp4")
 # cap = cv2.VideoCapture("Screen Recording 2025-05-13 145659.mp4")
 # cap = cv2.VideoCapture("bowling.mp4") # Example from MediaPipe script
 # cap = cv2.VideoCapture(0)  # Webcam
 
-# RTSP_URL = 'rtsp://vmnavas:Zoft@2025@192.168.5.102:554/stream2'
-# os.environ['OPENCV_FFMPEG_CAPTURE_OPTIONS'] = 'rtsp_transport;udp'
-# cap = cv2.VideoCapture(RTSP_URL,cv2.CAP_FFMPEG)
+RTSP_URL = 'rtsp://vmnavas:Zoft@2025@192.168.5.102:554/stream2'
+os.environ['OPENCV_FFMPEG_CAPTURE_OPTIONS'] = 'rtsp_transport;udp'
+cap = cv2.VideoCapture(RTSP_URL,cv2.CAP_FFMPEG)
 
 # Get input video properties
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
