@@ -54,15 +54,18 @@ python final.py
 
 ## Demo
 
-https://github.com/yourusername/falldetection/assets/demo.mp4
+https://user-images.githubusercontent.com/assets/fall_detection_output.mp4
+
+<video width="100%" controls>
+  <source src="fall_detection_output.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 Watch the demo video above to see the fall detection system in action. The video demonstrates:
 - Real-time pose detection and tracking
 - Visual indicators for different states (Normal, Potential Fall, Fall Detected)
 - Multiple fall detection scenarios
 - Person tracking with unique IDs
-
-You can find the full video output in `assets/demo.mp4`.
 
 ## Detection States
 
