@@ -54,7 +54,7 @@ python final.py
 
 ## Demo
 
-https://user-images.githubusercontent.com/assets/fall_detection_output.mp4
+https://github.com/j22k/falling/tree/main/assets/demo.mp4
 
 <video width="100%" controls>
   <source src="fall_detection_output.mp4" type="video/mp4">
