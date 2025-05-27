@@ -38,14 +38,25 @@ HISTORY_CLEANUP_INTERVAL = 5      # Seconds to keep track of a person after they
 # cap = cv2.VideoCapture("gettyimages-486787358-640_adpp.mp4")
 # cap = cv2.VideoCapture("gettyimages-1325099666-640_adpp.mp4")
 # cap = cv2.VideoCapture("gettyimages-1732145742-640_adpp.mp4")
-# cap = cv2.VideoCapture("videoplayback.mp4")
+cap = cv2.VideoCapture("videoplayback.mp4")
 # cap = cv2.VideoCapture("Screen Recording 2025-05-13 145659.mp4")
 # cap = cv2.VideoCapture("bowling.mp4") # Example from MediaPipe script
-cap = cv2.VideoCapture("gettyimages-1732145742-640_adpp.mp4")  # Webcam
+# cap = cv2.VideoCapture(0)  # Webcam
 
 # RTSP_URL = 'rtsp://vmnavas:Zoft@2025@192.168.5.102:554/stream2'
 # os.environ['OPENCV_FFMPEG_CAPTURE_OPTIONS'] = 'rtsp_transport;udp'
 # cap = cv2.VideoCapture(RTSP_URL,cv2.CAP_FFMPEG)
+
+# Get input video properties
+frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps = int(cap.get(cv2.CAP_PROP_FPS))
+
+# Create VideoWriter object
+output_filename = 'fall_detection_output.mp4'
+fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+out = cv2.VideoWriter(output_filename, fourcc, fps, (frame_width, frame_height))
+
 # Debug list for angles (can consume memory for long videos)
 calculated_angles = []
 
@@ -320,6 +331,7 @@ while True:
             cv2.putText(plotted_frame, label, (text_x_pos, text_y_pos),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
+    out.write(plotted_frame)
 
     # --- Display Frame ---
     cv2.imshow("Fall Detection (Combined AR + Angle + Duration + Full Body Filter)", plotted_frame)
@@ -332,6 +344,7 @@ while True:
         break
 
 # --- Release Resources ---
+out.release()
 cap.release()
 cv2.destroyAllWindows()
 
