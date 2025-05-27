@@ -54,7 +54,15 @@ python final.py
 
 ## Demo
 
-A demo of the fall detection system can be found in the `fall_detection_output.mp4` file, which shows the system detecting falls in various scenarios.
+https://github.com/yourusername/falldetection/assets/demo.mp4
+
+Watch the demo video above to see the fall detection system in action. The video demonstrates:
+- Real-time pose detection and tracking
+- Visual indicators for different states (Normal, Potential Fall, Fall Detected)
+- Multiple fall detection scenarios
+- Person tracking with unique IDs
+
+You can find the full video output in `assets/demo.mp4`.
 
 ## Detection States
 
